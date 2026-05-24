@@ -29,8 +29,8 @@ export const projects: Project[] = [
       "Custom UI components and premium typography",
       "Next.js App Router and optimized asset rendering"
     ],
-    liveUrl: null,
-    githubUrl: null,
+    liveUrl: "https://abdelmajidhermouch.vercel.app/",
+    githubUrl: "https://github.com/hermouchDev/My-Portfolio",
   },
   {
     slug: "bztamiflow",
@@ -137,8 +137,8 @@ export const projects: Project[] = [
       "Zustand state management",
       "Congratulations sound on task completion",
     ],
-    liveUrl: "https://pay-together-02.vercel.app/",
-    githubUrl: "https://github.com/hermouchDev/Pay-Together",
+    liveUrl: null,
+    githubUrl: null,
   },
   {
     slug: "hermouch-pizza",
@@ -195,7 +195,7 @@ export const projects: Project[] = [
       "Responsive mobile-first design",
       "Clean minimal UI",
     ],
-    liveUrl: "https://lnkd.in/ecVxu6Gk",
-    githubUrl: "https://lnkd.in/eZ45ZgAn",
+    liveUrl: "https://pay-together-02.vercel.app/",
+    githubUrl: "https://github.com/hermouchDev/Pay-Together",
   }
 ];
