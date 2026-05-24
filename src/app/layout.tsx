@@ -10,8 +10,11 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Portfolio",
-  description: "A cinematic developer portfolio",
+  title: "Abdelmajid Hermouch",
+  description: "Portfolio of Abdelmajid Hermouch",
+  verification: {
+    google: "qjd--RVCVJE2cxxG0MeQjp10KNB3H0niuS1Jw6m1onc",
+  },
 };
 
 export default function RootLayout({
