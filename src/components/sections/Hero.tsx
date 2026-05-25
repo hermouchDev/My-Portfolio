@@ -50,11 +50,20 @@ export function Hero() {
           ref={bgWrapperRef}
           className="absolute inset-0 w-full h-[100%] -top-[0%]"
         >
+          {/* Mobile image: visible on small screens only */}
+          <Image
+            src="/hero_section_image_mobile.png"
+            alt="Hero Background Mobile"
+            fill
+            className="object-cover block md:hidden"
+            priority
+          />
+          {/* Desktop image: visible on medium and larger screens */}
           <Image
             src="/hero_image2.png"
             alt="Hero Background"
             fill
-            className="object-cover"
+            className="object-cover hidden md:block"
             priority
           />
           {/* Subtle gradient overlay to ensure text readability */}
