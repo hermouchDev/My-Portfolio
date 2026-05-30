@@ -20,8 +20,8 @@ const SKILL_WORDS = [
 
 const FORMED_LINES = ["FRONTEND", "CREATIVE", "DEVELOPER"] as const;
 
-const LOADER_BG = "#C8D4C8";
-const LETTER_COLOR = "#2A3A2A";
+const LOADER_BG = "rgb(200, 212, 200)";
+const LETTER_COLOR = "rgb(42, 58, 42)";
 const BASE_RADIUS = 280;
 const MOBILE_RADIUS = 160;
 
@@ -39,7 +39,7 @@ function buildLetters() {
         char,
         id: `letter-${wordIndex}-${charIndex}-${char}`,
         rotation: seededRandom(index * 3 + 1) * 360 - 180,
-        fontSize: 12 + seededRandom(index * 7 + 2) * 6,
+        fontSize: Math.round(12 + seededRandom(index * 7 + 2) * 6),
       });
     });
   });
