@@ -4,6 +4,7 @@ import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 import SmoothScrolling from "@/components/layout/SmoothScrolling";
 import MaskCursor from "@/components/ui/MaskCursor";
+import { ClientLayout } from "@/components/layout/ClientLayout";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -29,8 +30,10 @@ export default function RootLayout({
       className={`${inter.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-bg text-primary-text">
-        <MaskCursor />
-        <SmoothScrolling>{children}</SmoothScrolling>
+        <ClientLayout>
+          <MaskCursor />
+          <SmoothScrolling>{children}</SmoothScrolling>
+        </ClientLayout>
         <Analytics />
       </body>
     </html>
