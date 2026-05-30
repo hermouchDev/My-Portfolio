@@ -4,18 +4,46 @@ import { useRef, useEffect } from "react";
 import Image from "next/image";
 import { ProfileCard } from "@/components/ui/ProfileCard";
 import { gsap } from "@/lib/gsap";
+import { PRELOADER_COMPLETE_EVENT } from "@/components/layout/Preloader";
 
 export function Hero() {
   const heroRef = useRef<HTMLElement>(null);
   const textRef = useRef<HTMLDivElement>(null);
   const profileCardRef = useRef<HTMLDivElement>(null);
   const bgWrapperRef = useRef<HTMLDivElement>(null);
+  const entrancePlayedRef = useRef(false);
 
-  // Parallax and Entrance animations
   useEffect(() => {
     if (!textRef.current || !profileCardRef.current || !bgWrapperRef.current || !heroRef.current) return;
 
-    // Parallax background
+    const texts = textRef.current.querySelectorAll(".hero-text");
+
+    gsap.set(texts, { y: 50, opacity: 0, filter: "blur(10px)" });
+    gsap.set(profileCardRef.current, { x: 100, opacity: 0 });
+
+    const runEntrance = () => {
+      if (entrancePlayedRef.current) return;
+      entrancePlayedRef.current = true;
+
+      gsap.to(texts, {
+        y: 0,
+        opacity: 1,
+        filter: "blur(0px)",
+        duration: 1,
+        stagger: 0.2,
+        ease: "power3.out",
+        delay: 0.15,
+      });
+
+      gsap.to(profileCardRef.current, {
+        x: 0,
+        opacity: 1,
+        duration: 1,
+        ease: "power3.out",
+        delay: 0.55,
+      });
+    };
+
     gsap.to(bgWrapperRef.current, {
       y: "15%",
       ease: "none",
@@ -27,19 +55,11 @@ export function Hero() {
       },
     });
 
-    const texts = textRef.current.querySelectorAll(".hero-text");
+    window.addEventListener(PRELOADER_COMPLETE_EVENT, runEntrance);
 
-    gsap.fromTo(
-      texts,
-      { y: 50, opacity: 0, filter: "blur(10px)" },
-      { y: 0, opacity: 1, filter: "blur(0px)", duration: 1, stagger: 0.2, ease: "power3.out", delay: 0.5 }
-    );
-
-    gsap.fromTo(
-      profileCardRef.current,
-      { x: 100, opacity: 0 },
-      { x: 0, opacity: 1, duration: 1, ease: "power3.out", delay: 1 }
-    );
+    return () => {
+      window.removeEventListener(PRELOADER_COMPLETE_EVENT, runEntrance);
+    };
   }, []);
 
   return (
