@@ -15,7 +15,7 @@ export function ProfileCard({ className }: ProfileCardProps) {
     >
       <div className="relative h-16 w-16 overflow-hidden rounded-xl">
         <Image
-          src="/linkedin_image.jpg"
+          src="/my-image.png"
           alt="Profile"
           fill
           className="object-cover"
