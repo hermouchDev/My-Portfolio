@@ -17,7 +17,19 @@ export const metadata: Metadata = {
   verification: {
     google: "qjd--RVCVJE2cxxG0MeQjp10KNB3H0niuS1Jw6m1onc",
   },
+  openGraph: {
+    title: "Abdelmajid Hermouch",
+    description: "Portfolio of Abdelmajid Hermouch",
+    images: [{ url: "/my-image.jpg" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Abdelmajid Hermouch",
+    description: "Portfolio of Abdelmajid Hermouch",
+    images: ["/my-image.jpg"],
+  },
 };
+
 
 export default function RootLayout({
   children,
