@@ -6,7 +6,7 @@ import { cn } from "@/lib/utils";
 
 import {
   Code2, Database, Terminal, Webhook, Paintbrush,
-  Gauge, Zap, Cloud, Wrench, BrainCircuit, Globe, PenTool
+  Gauge, Zap, Cloud, Wrench, BrainCircuit, Globe, PenTool, MousePointer2, FileText
 } from "lucide-react";
 import {
   SiReact, SiNextdotjs, SiTypescript, SiTailwindcss, SiGreensock,
@@ -14,8 +14,8 @@ import {
   SiFigma, SiFramer, SiLighthouse, SiGit, SiDocker, SiVercel, SiLinux,
   SiVite, SiBootstrap, SiExpress, SiMongodb, SiPrisma, SiSupabase, SiPhp,
   SiCloudinary, SiJsonwebtokens, SiGoogle,
-  SiJquery, SiRedux, SiPython, SiCanva, SiJira, SiMicrosoftoffice,
-  SiGithubcopilot, SiCursor
+  SiJquery, SiRedux, SiPython, SiCanva, SiJira,
+  SiGithubcopilot
 } from "react-icons/si";
 
 const skills = [
@@ -80,7 +80,7 @@ const skills = [
       { name: "Canva", icon: SiCanva },
       { name: "Figma", icon: SiFigma },
       { name: "Framer", icon: SiFramer },
-      { name: "Microsoft Office", icon: SiMicrosoftoffice },
+      { name: "Microsoft Office", icon: FileText },
     ],
   },
   {
@@ -101,7 +101,7 @@ const skills = [
     name: "AI-Assisted Dev",
     icon: BrainCircuit,
     tools: [
-      { name: "Cursor", icon: SiCursor },
+      { name: "Cursor", icon: MousePointer2 },
       { name: "GitHub Copilot", icon: SiGithubcopilot },
       { name: "Claude Code", icon: Cloud },
       { name: "Antigravity", icon: Zap },
