@@ -4,85 +4,108 @@ import { useRef, useEffect, useState } from "react";
 import { gsap } from "@/lib/gsap";
 import { cn } from "@/lib/utils";
 
-import { Code2, Database, PenTool, Zap, Terminal, Webhook, Paintbrush, Gauge, Zap as Lightning, Cloud } from "lucide-react";
+import {
+  Code2, Database, Terminal, Webhook, Paintbrush,
+  Gauge, Zap, Cloud, Wrench, BrainCircuit, Globe, PenTool
+} from "lucide-react";
 import {
   SiReact, SiNextdotjs, SiTypescript, SiTailwindcss, SiGreensock,
   SiNodedotjs, SiLaravel, SiMysql, SiPostgresql,
   SiFigma, SiFramer, SiLighthouse, SiGit, SiDocker, SiVercel, SiLinux,
-  SiVite, SiBootstrap, SiExpress, SiMongodb, SiPrisma, SiSupabase, SiPhp, SiCloudinary, SiJsonwebtokens, SiGoogle
+  SiVite, SiBootstrap, SiExpress, SiMongodb, SiPrisma, SiSupabase, SiPhp,
+  SiCloudinary, SiJsonwebtokens, SiGoogle,
+  SiJquery, SiRedux, SiPython, SiCanva, SiJira, SiMicrosoftoffice,
+  SiGithubcopilot, SiCursor
 } from "react-icons/si";
 
 const skills = [
   {
     num: "01",
-    name: "Frontend Development",
+    name: "Front-end",
     icon: Code2,
     tools: [
-      { name: "React", icon: SiReact },
-      { name: "Next.js", icon: SiNextdotjs },
+      { name: "HTML", icon: Globe },
+      { name: "CSS", icon: Paintbrush },
+      { name: "JavaScript", icon: Zap },
+      { name: "React JS", icon: SiReact },
+      { name: "Next JS", icon: SiNextdotjs },
       { name: "TypeScript", icon: SiTypescript },
       { name: "Tailwind CSS", icon: SiTailwindcss },
+      { name: "Bootstrap", icon: SiBootstrap },
+      { name: "jQuery", icon: SiJquery },
+      { name: "Redux", icon: SiRedux },
+      { name: "UX/UI", icon: PenTool },
       { name: "GSAP", icon: SiGreensock },
       { name: "Vite", icon: SiVite },
-      { name: "Bootstrap 5", icon: SiBootstrap },
     ],
   },
   {
     num: "02",
-    name: "Backend & Database",
-    icon: Database,
+    name: "Back-end",
+    icon: Terminal,
     tools: [
-      { name: "Node.js", icon: SiNodedotjs },
-      { name: "Laravel", icon: SiLaravel },
-      { name: "Express", icon: SiExpress },
-      { name: "PostgreSQL", icon: SiPostgresql },
-      { name: "MongoDB", icon: SiMongodb },
-      { name: "MySQL", icon: SiMysql },
-      { name: "Prisma", icon: SiPrisma },
-      { name: "Supabase", icon: SiSupabase },
       { name: "PHP", icon: SiPhp },
+      { name: "Laravel", icon: SiLaravel },
+      { name: "Python", icon: SiPython },
+      { name: "Node JS", icon: SiNodedotjs },
+      { name: "Express JS", icon: SiExpress },
     ],
   },
   {
     num: "03",
-    name: "Architecture & DevOps",
-    icon: Terminal,
+    name: "Base de données",
+    icon: Database,
     tools: [
-      { name: "Docker", icon: SiDocker },
-      { name: "Microservices", icon: Webhook },
-      { name: "JWT Auth", icon: SiJsonwebtokens },
-      { name: "Git", icon: SiGit },
+      { name: "MySQL", icon: SiMysql },
+      { name: "NoSQL", icon: Database },
+      { name: "MongoDB", icon: SiMongodb },
+      { name: "JSON", icon: SiJsonwebtokens },
+      { name: "Supabase", icon: SiSupabase },
+      { name: "PostgreSQL", icon: SiPostgresql },
+      { name: "Prisma", icon: SiPrisma },
     ],
   },
   {
     num: "04",
-    name: "UI/UX Design",
-    icon: PenTool,
+    name: "Outils & Workflow",
+    icon: Wrench,
     tools: [
+      { name: "GitHub", icon: SiGit },
+      { name: "Git", icon: SiGit },
+      { name: "Docker", icon: SiDocker },
+      { name: "Vercel", icon: SiVercel },
+      { name: "Linux", icon: SiLinux },
+      { name: "Agil / Scrum", icon: Webhook },
+      { name: "Jira", icon: SiJira },
+      { name: "Canva", icon: SiCanva },
       { name: "Figma", icon: SiFigma },
       { name: "Framer", icon: SiFramer },
-      { name: "Design Systems", icon: Paintbrush },
+      { name: "Microsoft Office", icon: SiMicrosoftoffice },
     ],
   },
   {
     num: "05",
-    name: "Performance & Opt",
-    icon: Zap,
-    tools: [
-      { name: "Lighthouse", icon: SiLighthouse },
-      { name: "Web Vitals", icon: Gauge },
-      { name: "Lazy Loading", icon: Lightning },
-    ],
-  },
-  {
-    num: "06",
     name: "Cloud & APIs",
     icon: Cloud,
     tools: [
       { name: "Google Gemini AI", icon: SiGoogle },
       { name: "Cloudinary", icon: SiCloudinary },
       { name: "REST APIs", icon: Webhook },
-      { name: "Vercel", icon: SiVercel },
+      { name: "JWT Auth", icon: SiJsonwebtokens },
+      { name: "Lighthouse", icon: SiLighthouse },
+      { name: "Web Vitals", icon: Gauge },
+    ],
+  },
+  {
+    num: "06",
+    name: "AI-Assisted Dev",
+    icon: BrainCircuit,
+    tools: [
+      { name: "Cursor", icon: SiCursor },
+      { name: "GitHub Copilot", icon: SiGithubcopilot },
+      { name: "Claude Code", icon: Cloud },
+      { name: "Antigravity", icon: Zap },
+      { name: "Open Code", icon: Terminal },
     ],
   },
 ];
