@@ -122,8 +122,8 @@ export function About() {
 
           <div className="flex flex-wrap gap-4 mt-12">
             <a
-              href="/cv/hermouch-abdelmajid-cv.pdf"
-              download="hermouch-abdelmajid-cv.pdf"
+              href="/cv/hermouch-abdelmajid-cv-new.pdf"
+              download="hermouch-abdelmajid-cv-new.pdf"
               className="bg-black text-white hover:bg-black/80 rounded-full px-8 py-3.5 text-sm font-medium transition-colors inline-flex items-center justify-center"
             >
               Resume
