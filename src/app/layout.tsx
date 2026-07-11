@@ -13,20 +13,29 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: "Abdelmajid Hermouch",
-  description: "Portfolio of Abdelmajid Hermouch",
+  description:
+    "I'm a Full Stack Developer with 0+ years of experience in building scalable web applications and high-growth digital products.",
   verification: {
     google: "qjd--RVCVJE2cxxG0MeQjp10KNB3H0niuS1Jw6m1onc",
   },
+  icons: {
+    icon: "/icon.png",
+    apple: "/icon.png",
+  },
   openGraph: {
-    title: "Abdelmajid Hermouch",
-    description: "Portfolio of Abdelmajid Hermouch",
-    images: [{ url: "/my-image.jpg" }],
+    title: "Abdelmajid Hermouch | Full Stack Developer",
+    description:
+      "I'm a Full Stack Developer with 0+ years of experience in building scalable web applications and high-growth digital products.",
+    images: [{ url: "/my-image.png", width: 1200, height: 630 }],
+    type: "website",
+    url: "https://abdelmajidhermouch.vercel.app",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Abdelmajid Hermouch",
-    description: "Portfolio of Abdelmajid Hermouch",
-    images: ["/my-image.jpg"],
+    title: "Abdelmajid Hermouch | Full Stack Developer",
+    description:
+      "I'm a Full Stack Developer with 0+ years of experience in building scalable web applications and high-growth digital products.",
+    images: ["/my-image.png"],
   },
 };
 
